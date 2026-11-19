@@ -1,0 +1,38 @@
+.result { margin-block: 8px; font-size: 14px; }
+#task1-target { font-size: 20px; font-weight: 500; }
+.result ol { margin: 0; padding-inline-start: 24px; }
+#task6-input { width: 100%; margin-bottom: 8px; }
+.image-stage { display: grid; place-items: center; min-height: 288px; margin-block: 8px; overflow: hidden; }
+.transform-stage { padding: 32px; }
+.demo-img { display: block; object-fit: cover; }
+#task3-img { border: 4px solid var(--color-steel-border); border-radius: 0; }
+#task4-img { border: 3px solid var(--color-steel-border); }
+.motion-stage { container-type: inline-size; margin-bottom: 8px; padding: 28px; overflow: hidden; }
+#task5-box {
+  width: 88px;
+  aspect-ratio: 1;
+  border: 1px solid #fafafa;
+  border-radius: 10px;
+  background: var(--color-charcoal-surface);
+  box-shadow: -4px 0 16px rgb(255 185 49 / .25), 4px 0 16px rgb(46 115 252 / .35);
+  animation: animMove 3s ease-in-out infinite;
+}
+@keyframes animMove {
+  0%, 100% { transform: translateX(0); background-color: #171717; }
+  50% { transform: translateX(min(200px, max(0px, calc(100cqw - 88px)))); background-color: #262626; }
+}
+@keyframes animPulse {
+  0% { transform: scale(1) rotate(0deg); border-radius: 10px; opacity: 1; }
+  50% { transform: scale(1.18) rotate(180deg); border-radius: 50%; opacity: .7; }
+  100% { transform: scale(1) rotate(360deg); border-radius: 10px; opacity: 1; }
+}
+.login-box { max-width: 400px; padding: 16px; border-radius: var(--radius-card); border: var(--edge); background: var(--color-charcoal-surface); }
+.input-group { display: grid; gap: 4px; margin-top: 8px; }
+.input-group input, .login-btn { width: 100%; }
+.login-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-block: 16px; font-size: 12px; }
+.error, .success { font-size: 14px; }
+.error:not(:empty), .success:not(:empty) { margin-top: 8px; }
+.error { color: #ffb4b4; }
+.success { color: var(--color-cloud-white); }
+@media (max-width: 520px) { .image-stage { min-height: 224px; } }
+@media (prefers-reduced-motion: reduce) { #task5-box { animation: none !important; } }

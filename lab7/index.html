@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Лабораторная работа №7 — JavaScript</title>
+<link rel="stylesheet" href="graphite.css">
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+<div class="strip">USM · Веб-программирование</div>
+<header class="topbar shell"><span class="wordmark">Лаборатория / 07</span><span class="topbar-note">JavaScript</span></header>
+<main class="shell">
+<header class="hero">
+  <div class="hero-copy"><p class="eyebrow">Лабораторная работа №7</p><h1>Управление элементами</h1><p>Изменение DOM, трансформации, фильтрация текста и проверка формы.</p><div class="actions"><a class="button primary" href="#task1">К заданиям</a><a class="button" href="#task7">К форме входа</a></div></div>
+  <div class="lattice" aria-hidden="true"><i></i><i></i><i></i></div>
+</header>
+<nav class="jump-links" aria-label="Задания"><a href="#task1">01 · Текст</a><a href="#task2">02 · Список</a><a href="#task3">03 · Изображение</a><a href="#task4">04 · Transform</a><a href="#task5">05 · Анимация</a><a href="#task6">06 · RegExp</a><a href="#task7">07 · Вход</a></nav>
+<div class="mosaic">
+<section id="task1" class="panel">
+<h2>Задача 1. Копирование p в h1</h2>
+<p class="desc">Нажмите кнопку, чтобы скопировать содержимое абзаца в заголовок.</p>
+<p id="task1-source">JavaScript позволяет динамически изменять содержимое HTML-элементов на странице.</p>
+<h1 id="task1-target" class="result" aria-live="polite">Здесь появится текст</h1>
+<button id="task1-btn" type="button">Копировать в заголовок</button>
+</section>
+<section id="task2" class="panel">
+<h2>Задача 2. Копирование ol в div</h2>
+<p class="desc">Содержимое упорядоченного списка копируется в блок, способ нумерации меняется на строчные буквы латинского алфавита.</p>
+<ol id="task2-source" type="1">
+<li>Первый элемент списка</li>
+<li>Второй элемент списка</li>
+<li>Третий элемент списка</li>
+<li>Четвертый элемент списка</li>
+</ol>
+<button id="task2-btn" type="button">Копировать список в блок</button>
+<div id="task2-dest" class="result" aria-live="polite">Здесь появится скопированный список</div>
+</section>
+<section id="task3" class="panel">
+<h2>Задача 3. Изменение свойств изображения</h2>
+<p class="desc">Наведите курсор на изображение или используйте кнопки, чтобы изменить размер, рамку и скругление углов.</p>
+<div class="demo-stage image-stage"><img id="task3-img" class="demo-img" src="https://placehold.co/300x200/171717/e5e5e5?text=Image+Task3" alt="Демонстрационное изображение" width="300" height="200"></div>
+<div class="actions">
+<button id="task3-size" type="button">Изменить размер</button>
+<button id="task3-border" type="button">Изменить рамку</button>
+<button id="task3-radius" type="button">Скруглить углы</button>
+<button id="task3-reset" type="button" class="secondary">Сбросить</button>
+</div>
+</section>
+<section id="task4" class="panel">
+<h2>Задача 4. Свойство transform</h2>
+<p class="desc">Нажмите кнопки, чтобы применить rotate(), scale(), translate() и skew() к изображению.</p>
+<div class="demo-stage image-stage transform-stage"><img id="task4-img" class="demo-img" src="https://placehold.co/300x200/262626/e5e5e5?text=Image+Task4" alt="Изображение для transform" width="300" height="200"></div>
+<div class="actions">
+<button id="task4-rotate" type="button">Rotate 45&deg;</button>
+<button id="task4-scale" type="button">Scale 1.3</button>
+<button id="task4-move" type="button">Translate</button>
+<button id="task4-skew" type="button">Skew 20&deg;</button>
+<button id="task4-combine" type="button">Комбинация</button>
+<button id="task4-reset" type="button" class="secondary">Сбросить</button>
+</div>
+<div class="result">Текущий transform: <span id="transform-value">none</span></div>
+</section>
+<section id="task5" class="panel">
+<h2>Задача 5. Переключение анимаций</h2>
+<p class="desc">Нажмите кнопку, чтобы переключиться с одной анимации на другую.</p>
+<div class="demo-stage motion-stage"><div id="task5-box" aria-hidden="true"></div></div>
+<button id="task5-btn" type="button">Переключить анимацию</button>
+<div class="result">Текущая анимация: <span id="task5-label">animMove</span></div>
+</section>
+<section id="task6" class="panel">
+<h2>Задача 6. Фильтр слов (RegExp)</h2>
+<p class="desc">Введите текст. Слова urât, rău, murdar будут заменены на *** с помощью match() и replace().</p>
+<textarea id="task6-input" rows="4" aria-label="Текст для фильтрации" placeholder="Введите текст здесь...">Acesta este un text urât şi rău, foarte murdar.</textarea>
+<div class="actions">
+<button id="task6-btn" type="button">Проверить текст</button>
+<button id="task6-clear" type="button" class="secondary">Очистить</button>
+</div>
+<div id="task6-result" class="result">Здесь появится отфильтрованный текст</div>
+<div class="result">Найдено совпадений: <span id="task6-count">0</span></div>
+</section>
+<section id="task7" class="panel wide">
+<h2>Задача 7. Форма входа</h2>
+<p class="desc">Логин: 6–10 символов, только буквы и цифры, минимум одна заглавная буква и одна цифра. Пароль: минимум 8 символов, минимум одна заглавная буква, одна цифра и один из символов _, @, !, #.</p>
+<div class="login-wrap">
+<form id="login-form" class="login-box" novalidate>
+<h3>INTRARE</h3>
+<div class="input-group">
+<label for="login-user">Log-in</label>
+<input type="text" id="login-user" autocomplete="username" aria-describedby="login-user-error">
+</div>
+<div class="error" id="login-user-error" aria-live="polite"></div>
+<div class="input-group">
+<label for="login-pass">Parola</label>
+<input type="password" id="login-pass" autocomplete="current-password" aria-describedby="login-pass-error">
+</div>
+<div class="error" id="login-pass-error" aria-live="polite"></div>
+<div class="login-row">
+<label><input type="checkbox" id="remember"> RETINE-MA</label>
+<a href="#" id="forgot-link">AM UITAT PAROLA...</a>
+</div>
+<button type="submit" class="login-btn">INTRA</button>
+<div class="success" id="login-success" role="status"></div>
+</form>
+</div>
+</section>
+</div>
+</main>
+<footer class="site-footer shell">Lab7 &mdash; HTML / CSS / JS</footer>
+<script src="JS/script.js"></script>
+</body>
+</html>
