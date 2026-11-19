@@ -1,0 +1,6 @@
+/* External CSS example: timetable and grouped rows. */
+#schedule table { min-width: 700px; }
+#schedule td[rowspan] { background: var(--color-charcoal-surface); font-weight: 600; }
+#schedule tr:nth-child(even) td:not([rowspan]) { background: var(--color-true-black); }
+#schedule tr:hover td:not([rowspan]) { background: var(--color-charcoal-surface); }
+#schedule td:nth-child(3) { font-variant-numeric: tabular-nums; }

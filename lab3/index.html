@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №3</title>
+    <link rel="stylesheet" href="graphite.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        /* Задача 2. Внутренние стили (селекторы только по имени элемента) */
+        ul {
+            background-color: var(--color-charcoal-surface);
+            list-style-type: square;
+            list-style-position: inside;
+            text-align: left;
+            padding: 16px;
+            margin: 8px 0 16px;
+            border: 1px dashed var(--color-steel-border);
+            border-radius: 10px;
+        }
+        ol {
+            background-color: var(--color-true-black);
+            list-style-type: upper-roman;
+            list-style-position: outside;
+            text-align: left;
+            padding: 16px 16px 16px 48px;
+            margin: 8px 0 16px;
+            border: 1px dotted var(--color-steel-border);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="strip">USM · Веб-программирование</div>
+    <header class="topbar shell"><span class="wordmark">Лаборатория / 03</span><span class="topbar-note">CSS</span></header>
+    <main class="shell">
+    <header class="hero">
+        <div class="hero-copy"><p class="eyebrow">Лабораторная работа №3</p><h1>Три способа задать стиль</h1><p>Встроенные, внутренние и внешние стили на примере стихотворения, списков и расписания.</p><div class="actions"><a class="button primary" href="#poem">К примерам</a><a class="button" href="#schedule">К расписанию</a></div></div>
+        <div class="lattice" aria-hidden="true"><i></i><i></i><i></i></div>
+    </header>
+    <nav class="jump-links" aria-label="Задания"><a href="#poem">01 · Встроенные</a><a href="#lists">02 · Внутренние</a><a href="#schedule">03 · Внешние</a></nav>
+    <div class="mosaic">
+
+    <!-- Задача 1. Встроенные стили -->
+    <section id="poem" class="panel">
+    <h2>Задача 1. Стихотворение</h2>
+
+    <h3 style="color: var(--color-cloud-white); text-decoration: underline; text-underline-offset: 4px; text-align: center;">А. С. Пушкин «Зимний вечер»</h3>
+
+    <p style="font-size:18px; color:var(--color-paper-white); font-family:Georgia,serif; font-style:italic; text-align:left; line-height:1.5; background:var(--color-charcoal-surface); padding:16px; border:var(--edge); border-radius:10px;">
+        Буря мглою небо кроет,<br>
+        Вихри снежные крутя;<br>
+        То, как зверь, она завоет,<br>
+        То заплачет, как дитя.
+    </p>
+
+    <p style="font-size:16px; color:var(--color-cloud-white); font-weight:600; text-align:right; letter-spacing:.04em; line-height:1.5; background:var(--color-true-black); padding:16px; border:var(--edge); border-radius:10px;">
+        То по кровле обветшалой<br>
+        Вдруг соломой зашумит,<br>
+        То, как путник запоздалый,<br>
+        К нам в окошко застучит.
+    </p>
+
+    <p style="font-size:16px; color:var(--color-fog); font-family:monospace; text-align:center; line-height:1.5; background:var(--color-charcoal-surface); padding:16px; border:var(--edge); border-inline-start-color:var(--color-steel-border); border-radius:10px;">
+        Наша ветхая лачужка<br>
+        И печальна и темна.<br>
+        Что же ты, моя старушка,<br>
+        Приумолкла у окна?
+    </p>
+
+    </section>
+    <!-- Задача 2. Внутренние стили -->
+    <section id="lists" class="panel">
+    <h2>Задача 2. Списки</h2>
+
+    <h3>Маркированный список — мои любимые книги</h3>
+    <ul>
+        <li>А. С. Пушкин «Евгений Онегин»</li>
+        <li>М. Булгаков «Мастер и Маргарита»</li>
+        <li>Э. М. Ремарк «Три товарища»</li>
+        <li>Дж. Р. Р. Толкин «Властелин колец»</li>
+    </ul>
+
+    <h3>Нумерованный список — мой распорядок дня</h3>
+    <ol>
+        <li>Подъём и утренняя зарядка</li>
+        <li>Занятия в университете</li>
+        <li>Обед и отдых</li>
+        <li>Выполнение лабораторных работ</li>
+        <li>Чтение книг и прогулка</li>
+    </ol>
+    </section>
+
+    <!-- Задача 3. Внешние стили -->
+    <section id="schedule" class="panel wide">
+    <h2>Задача 3. Расписание занятий</h2>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="Расписание занятий">
+
+    <table>
+        <tr>
+            <th>День</th>
+            <th>№</th>
+            <th>Время</th>
+            <th>Дисциплина</th>
+            <th>Вид занятия</th>
+            <th>Аудитория</th>
+            <th>Преподаватель</th>
+        </tr>
+        <tr>
+            <td rowspan="4">Среда</td>
+            <td>1</td>
+            <td>08:00 – 09:30</td>
+            <td>Веб-программирование</td>
+            <td>Лекция</td>
+            <td>305</td>
+            <td>G. Marin</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>09:45 – 11:15</td>
+            <td>Базы данных</td>
+            <td>Лабораторная</td>
+            <td>310</td>
+            <td>I. Popov</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>11:30 – 13:00</td>
+            <td>Операционные системы</td>
+            <td>Семинар</td>
+            <td>212</td>
+            <td>A. Ivanov</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>13:15 – 14:45</td>
+            <td>Английский язык</td>
+            <td>Практика</td>
+            <td>118</td>
+            <td>M. Smith</td>
+        </tr>
+        <tr>
+            <td rowspan="4">Четверг</td>
+            <td>1</td>
+            <td>08:00 – 09:30</td>
+            <td>Компьютерные сети</td>
+            <td>Лекция</td>
+            <td>401</td>
+            <td>V. Petrov</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>09:45 – 11:15</td>
+            <td>Веб-программирование</td>
+            <td>Лабораторная</td>
+            <td>310</td>
+            <td>G. Marin</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>11:30 – 13:00</td>
+            <td>Теория вероятностей</td>
+            <td>Лекция</td>
+            <td>205</td>
+            <td>E. Sidorov</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>13:15 – 14:45</td>
+            <td>Физическая культура</td>
+            <td>Практика</td>
+            <td>Спортзал</td>
+            <td>D. Kozlov</td>
+        </tr>
+    </table>
+    </div>
+    </section>
+    </div>
+    </main>
+    <footer class="site-footer shell">USM · HTML / CSS / JavaScript</footer>
+
+</body>
+</html>
