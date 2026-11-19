@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог — Всё необходимое</title>
+    <link rel="stylesheet" href="assets/graphite.css">
+    <link rel="stylesheet" href="assets/shop.css">
+</head>
+<body class="shop">
+    <div class="strip">Учебный интернет-магазин · USM</div>
+    <header class="topbar shell">
+        <a href="index.html" class="wordmark">Всё необходимое</a>
+        <a href="cart.html" class="button">Корзина <span class="count" data-cart-count>0</span></a>
+    </header>
+    <main class="shell">
+        <header class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Интернет-магазин</p>
+                <h1>Каталог товаров</h1>
+                <p>Электроника, одежда и товары для дома.</p>
+                <div class="actions"><a class="button primary" href="#catalog">Смотреть каталог ↓</a><a class="button" href="cart.html">Открыть корзину</a></div>
+            </div>
+            <div class="lattice" aria-hidden="true"><i></i><i></i><i></i></div>
+        </header>
+        <nav class="category-grid" aria-label="Страницы категорий">
+            <a class="category-card" href="category-electronics.html"><span class="category-icon" aria-hidden="true">▣</span><span>Электроника</span><span aria-hidden="true">↗</span></a>
+            <a class="category-card" href="category-clothing.html"><span class="category-icon" aria-hidden="true">◇</span><span>Одежда</span><span aria-hidden="true">↗</span></a>
+            <a class="category-card" href="category-home.html"><span class="category-icon" aria-hidden="true">⌂</span><span>Дом</span><span aria-hidden="true">↗</span></a>
+        </nav>
+        <section id="catalog" class="catalog" aria-labelledby="catalog-title">
+            <h2 id="catalog-title">Все товары</h2>
+            <div class="catalog-toolbar">
+                <div class="actions" aria-label="Фильтр по категории" role="group">
+                    <button type="button" data-filter="all" class="chip is-active" aria-pressed="true">Все</button>
+                    <button type="button" data-filter="electronics" class="chip" aria-pressed="false">Электроника</button>
+                    <button type="button" data-filter="clothing" class="chip" aria-pressed="false">Одежда</button>
+                    <button type="button" data-filter="home" class="chip" aria-pressed="false">Дом</button>
+                </div>
+                <input data-search type="search" aria-label="Поиск товаров" placeholder="По названию или описанию">
+            </div>
+            <div data-products class="product-grid"><p class="empty-state">Загрузка товаров…</p></div>
+        </section>
+    </main>
+    <footer class="site-footer shell">© 2026 Всё необходимое</footer>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/home.page.js"></script>
+</body>
+</html>

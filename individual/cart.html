@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина — Всё необходимое</title>
+    <link rel="stylesheet" href="assets/graphite.css">
+    <link rel="stylesheet" href="assets/shop.css">
+</head>
+<body class="shop">
+    <div class="strip">Учебный интернет-магазин · USM</div>
+    <header class="topbar shell">
+        <a href="index.html" class="wordmark">Всё необходимое</a>
+        <a href="cart.html" class="button" aria-current="page">Корзина <span class="count" data-cart-count>0</span></a>
+    </header>
+    <main class="shell">
+        <header class="page-heading"><a href="index.html">← Каталог</a><h1>Корзина</h1></header>
+        <div role="status"><p data-notice class="hidden panel notice">С вами свяжутся! Функция не работает. Учебный проект.</p></div>
+        <div class="cart-layout">
+            <section class="panel" aria-labelledby="items-title">
+                <h2 id="items-title">Товары</h2>
+                <div data-cart-list class="cart-list"><p>Загрузка корзины…</p></div>
+            </section>
+            <aside class="panel cart-summary" aria-labelledby="summary-title">
+                <h2 id="summary-title">Ваш заказ</h2>
+                <p>Итого: <strong data-cart-total aria-live="polite">0</strong></p>
+                <button data-buy class="primary" type="button" disabled>Купить</button>
+            </aside>
+        </div>
+    </main>
+    <footer class="site-footer shell">© 2026 Всё необходимое</footer>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/cart.page.js"></script>
+</body>
+</html>
