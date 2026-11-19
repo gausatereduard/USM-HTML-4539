@@ -1,0 +1,11 @@
+.chapter-nav > ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; width: 100%; }
+.chapter-nav ul { list-style: none; padding: 0; margin: 0; }
+.chapter-nav li { min-width: 0; }
+.chapter-nav li ul { display: flex; flex-wrap: wrap; gap: 4px; margin-block-start: 8px; }
+.chapter-nav li li a { font-size: 12px; padding: 4px 8px; }
+.list-grid { margin-block: 8px 24px; }
+.list-grid > :is(ul, ol), .chapter dl { border: var(--edge); border-radius: var(--radius-card); background: var(--color-charcoal-surface); margin: 0; padding: 16px 16px 16px 32px; }
+.chapter dl { margin-block: 8px 16px; padding-inline: 16px; }
+.chapter dd { margin: 0 0 8px; color: var(--color-fog); }
+.text-samples blockquote { margin-inline: 0; padding: 8px 16px; border-inline-start: 1px solid var(--color-steel-border); }
+@media (max-width: 520px) { .chapter-nav > ul { grid-template-columns: 1fr; } }
