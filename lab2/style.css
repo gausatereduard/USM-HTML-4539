@@ -1,0 +1,12 @@
+.gallery { max-width: 544px; }
+.gallery td { background: var(--color-charcoal-surface); }
+.gallery img { width: 100%; aspect-ratio: 250 / 180; object-fit: cover; }
+.gallery [colspan] img { aspect-ratio: 510 / 180; }
+img.with-border { border: 3px solid var(--color-steel-border); }
+.form-layout > tbody > tr { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.form-table td { border: 0; padding: 4px; }
+.form-layout > tbody > tr > td { padding: 0; }
+.form-table fieldset + fieldset { margin-top: 8px; }
+.form-table :is(input:not([type=radio], [type=checkbox], [type=color]), textarea, select) { width: 100%; }
+audio { display: block; margin-bottom: 16px; }
+@media (max-width: 720px) { .form-layout > tbody > tr { grid-template-columns: minmax(0, 1fr); } }
