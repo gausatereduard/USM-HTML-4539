@@ -1,0 +1,19 @@
+#bgTable {
+  width: min(100%, 600px);
+  aspect-ratio: 3 / 2;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  padding: 0;
+  overflow: hidden;
+  margin-bottom: 8px;
+  background: var(--color-true-black) url("https://placehold.co/600x400/171717/e5e5e5?text=Main") center/cover;
+}
+#bgTable .cell { display: grid; place-items: center; text-shadow: 0 1px 8px #000; }
+#bgTable.with-border .cell { border: 1px solid var(--color-steel-border); }
+#bgTable.no-border, #bgTable.no-border .cell { border-color: transparent; }
+#keyField { width: 100%; }
+#demoParagraph, .result:not(:empty) { margin-block: 8px; }
+.result:empty { padding: 0; border: 0; margin: 0; }
+.birth-inputs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-bottom: 16px; }
+.birth-inputs label { display: grid; gap: 4px; font-size: 14px; }
+.birth-inputs input { width: 100%; }
