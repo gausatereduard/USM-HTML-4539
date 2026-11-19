@@ -1,0 +1,43 @@
+.blocks-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); gap: 8px; }
+.block {
+  display: flex;
+  align-items: end;
+  min-height: 144px;
+  padding: 8px;
+  border: var(--edge);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sm);
+  background-color: var(--color-charcoal-surface);
+}
+.block span { background: var(--color-true-black); border: var(--edge); border-radius: 4px; padding: 4px 8px; font: 12px/1.33 monospace; }
+.block1 { background-color: #202020; }
+.block:not(.block1) { background-image: url("../tile.svg"); }
+.block2 { background-color: #0d0d0d; background-repeat: repeat; }
+.block3 { background-color: #121212; background-repeat: repeat-x; }
+.block4 { background-color: #191919; background-repeat: repeat-y; }
+.block5 { background-color: #222; background-repeat: no-repeat; background-position: center; }
+
+#main-form { padding: 8px; border: var(--edge); border-radius: var(--radius-card); background: var(--color-true-black); }
+#btn-trimite { min-width: 104px; }
+.form-input:focus, input[type=color]:focus { border-color: var(--color-paper-white); background: var(--color-charcoal-surface); }
+form > div > div > fieldset { margin-block-start: 8px; }
+.form-right fieldset + fieldset { border-style: dashed; }
+.form-right fieldset + .form-note { font-style: italic; }
+.form-left fieldset ~ .form-buttons { margin: 8px 0 0; }
+input[type=email] { border-inline-start: 3px solid var(--color-ash); }
+input[type=date] { border-style: dotted; }
+.check-group { display: grid; gap: 4px; }
+
+.list { padding: 16px 16px 16px 32px; border: var(--edge); border-radius: var(--radius-card); color: var(--color-fog); background: var(--color-charcoal-surface); }
+.list1 li::before { content: "◇ "; }
+.list2 li::after { content: " ✓"; }
+.list li:first-child { color: var(--color-cloud-white); font-weight: 600; }
+.list li:last-child { font-style: italic; }
+.text-paragraph::first-letter { font-size: 28px; color: var(--color-cloud-white); }
+.text-paragraph::first-line { font-weight: 600; }
+.text-paragraph::selection, .list li::selection { color: var(--color-true-black); background: var(--color-paper-white); }
+.list-title::before { content: "▸ "; color: var(--color-fog); }
+.fav-link:link { color: var(--color-signal-orange); }
+.fav-link:visited { color: #e4a371; }
+.fav-link:hover { text-decoration-thickness: 2px; }
+.fav-link:active { color: var(--color-paper-white); }
